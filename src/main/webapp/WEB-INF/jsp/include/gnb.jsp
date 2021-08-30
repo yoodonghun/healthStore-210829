@@ -12,7 +12,7 @@
                     
         </div>
 		
-		<div class="login-info d-flex justify-content-end col-4">		    
+		<div class="login-info d-flex justify-content-end col-4">		     
 				<nav class="top-menu d-flex mt-4">
                     <ul class="nav"> <!-- nav, nav-item, nav-link 3종 세트 -->
                         <li class="nav-item"><a href="/user/sign_in_view" class="nav-link top-menu-font text-dark">로그인</a></li>

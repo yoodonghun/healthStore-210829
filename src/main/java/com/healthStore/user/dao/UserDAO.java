@@ -10,7 +10,7 @@ public interface UserDAO {
 
 	public User selectUserByUserId(String userId);
 	
-	 public User selectUserByLoginIdAndPassword(
+	 public User selectUserByLoginIdAndPassword( 
 			   @Param("userId") String loginId,
 			   @Param("password") String password);
 	   

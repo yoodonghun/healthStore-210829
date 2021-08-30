@@ -16,7 +16,7 @@
    <div>
        <header>
           <jsp:include page="../include/gnb.jsp" />
-       </header>
+       </header> 
        <section class="content">
           
        </section>

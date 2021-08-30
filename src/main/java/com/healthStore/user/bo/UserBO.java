@@ -21,7 +21,7 @@ public class UserBO {
    }
    
    public int insertUser(String userId, String password, String name, String email) {
-	   return userDAO.insertUser(userId, password, name, email);
+	   return userDAO.insertUser(userId, password, name, email); 
    }
    
 }

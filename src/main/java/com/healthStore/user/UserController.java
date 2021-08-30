@@ -35,7 +35,7 @@ public class UserController {
 		userBO.insertUser(loginId, encryptPassword, name, email);
 		
 		return "redirect:/user/sign_up_view";
-	}
+	} 
     
     @RequestMapping("/sign_in_view")
 	public String signInView(Model model) {

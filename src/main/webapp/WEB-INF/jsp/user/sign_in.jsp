@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" type="text/css" href="/static/css/signIn_style.css">
 </head>
-<body>
+<body> 
    <div class="container">
        <header>
 			<div class="logo text-center">
