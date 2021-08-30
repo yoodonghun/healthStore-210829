@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+header{height: 80px; background-color:#ffffff; border-bottom:1px solid}
+.search{height:30px}
+.logo{color:#000000; font-size:50px;}
+.nav-link{font-size:10px}
+.inputbox{border-left:3px; border-top:3px; border-right:3px}
+.searchbtn{border-left:3px; border-top:3px; border-right:3px; background:#ffffff}
+
+
+.content{}
