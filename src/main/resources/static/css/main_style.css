@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#wrap {height: 1500px}
+header {height:100px}
+.mainLogo{font-size:60px}
+.top-menu{font-size:15px;}
+nav {height: 50px; border-top:3px solid; border-bottom:1px solid; color:#000000}
+.imageBox{width: 1550px; height: 500px; background-color: #66c0bc}
+.middleBox{background-color:#b5a6e2; width: 400px; height:200px}
+.middleText {display: grid; place-content: center; text-align:center;}
+
+
+
+
+
