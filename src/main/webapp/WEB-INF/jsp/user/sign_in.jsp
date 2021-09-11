@@ -77,7 +77,7 @@
    
    <script>
    $(document).ready(function(){
-	  $("#signInBtn").click(function(e){
+	  $("#signInBtn").on("click",function(e){
 		  e.preventDefault();
 		  
 		  let loginId = $("input[name=loginId]").val().trim();
