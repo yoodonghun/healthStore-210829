@@ -11,17 +11,16 @@ public class UserBO {
 	@Autowired
 	private UserDAO userDAO;
 	
-   public User selectUserByUserId(String userId) {
+   public int insertUser(String loginId, String password, String name, String email) {
+	   return userDAO.insertUser(loginId, password, name, email);
+   }
+   
+   public User selectUserByLoginId(String loginId) {
 	   
-	   return userDAO.selectUserByUserId(userId);
+	   return userDAO.selectUserByLoginId(loginId);
    }
    
-   public User getUserByUserIdAndPassword(String userId, String password) {
-	   return userDAO.selectUserByLoginIdAndPassword(userId, password);
+   public User getUserByLoginIdAndPassword(String loginId, String password) {
+	   return userDAO.selectUserByLoginIdAndPassword(loginId, password);
    }
-   
-   public int insertUser(String userId, String password, String name, String email) {
-	   return userDAO.insertUser(userId, password, name, email); 
-   }
-   
 }

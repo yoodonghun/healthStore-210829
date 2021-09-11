@@ -8,15 +8,15 @@ import com.healthStore.user.model.User;
 @Repository
 public interface UserDAO {
 
-	public User selectUserByUserId(String userId);
+	public int insertUser(
+			@Param("loginId") String loginId,
+			@Param("password") String password,
+			@Param("name") String name,
+			@Param("email") String email);
 	
-	 public User selectUserByLoginIdAndPassword( 
-			   @Param("userId") String loginId,
-			   @Param("password") String password);
-	   
-	   public int insertUser(
-			  @Param("userId") String loginId,
-			  @Param("password") String password,
-			  @Param("name") String name,
-			  @Param("email") String email);
+	public User selectUserByLoginId(@Param("loginId") String loginId);
+	
+	public User selectUserByLoginIdAndPassword(
+			@Param("loginId") String loginId,
+			@Param("password") String password);
 }
