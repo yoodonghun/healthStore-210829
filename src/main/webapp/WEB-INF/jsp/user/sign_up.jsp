@@ -82,9 +82,8 @@
 		</div>
 		
 	</div>
-</body>
-
-<script>
+	
+	<script>
 	$(document).ready(function() {
 		$("#overlapCheckId").on("click", function(e) {
 			var loginId = $('input[name=loginId]').val().trim();
@@ -177,4 +176,5 @@
 		});
 	});
 </script>
+</body>
 </html>

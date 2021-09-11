@@ -74,11 +74,10 @@
        </div>
      
    </div>
-</body>
-
-<script>
+   
+   <script>
    $(document).ready(function(){
-	  $("#loginForm").submit(function(e){
+	  $("#loginForm").click(function(e){
 		  e.preventDefault();
 		  
 		  let loginId = $("input[name=loginId]").val().trim();
@@ -96,19 +95,16 @@
 		  let url = $(this).attr("action");
 		  let params = $(this).serialize();
 		  
-		  $.post(url, params).done(function(data)){
+		  $.post(url, params).done(function(data){
 			  
 			  if(data.result == "success"){
 				  alert("환영합니다 고객님.");
 				  location.href = "/user/afterLogin_main_page_view";
 			  }else{
 				  alert("로그인에 실패했습니다. 다시 입력해주세요");
-			  }
-		  }
-	  }); 	
-	  
-	   	
-	   	
+			  }		  
+	  }); 	   	
    });
-</script>
+  </script>
+</body>
 </html>
