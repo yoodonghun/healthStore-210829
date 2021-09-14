@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-
-  <div>
+<div>
      <div class="d-flex justify-content-center mt-4">
        <div class="imageBox">
         <img src="">        
@@ -13,7 +11,7 @@
        <div class="partBox d-flex justify-content-around  mt-4">
           <div class="middleBox">
 	           <img src="">
-	           <a href="/user/warning_view" class="middleText text-dark">상체 운동</a>	           
+	           <a href="/user/himssen_upperBody_view" class="middleText text-dark">상체 운동</a>	           
           </div>
         
           <div class="middleBox">

@@ -70,4 +70,28 @@ public class UserController {
 		
 		return "redirect:/user/sign_in_view";
 	}
+	
+	@RequestMapping("/himssen_upperBody_view")
+	public String upperView() {		
+		
+		return "part/upper";
+	}
+	
+	@RequestMapping("/himssen_lowerBody_view")
+	public String lowerView() {		
+		
+		return "part/lower";
+	}
+	
+	@RequestMapping("/himssen_abdominal_view")
+	public String abdominalView() {		
+		
+		return "part/abdominal";
+	}
+	
+	@RequestMapping("/warning_view")
+	public String warningView() {
+		
+		return "other/warning";
+	}
 }

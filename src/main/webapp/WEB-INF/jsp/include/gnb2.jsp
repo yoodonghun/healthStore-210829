@@ -12,7 +12,8 @@
              <div class="searchBox">
                 <div class="d-flex justify-content-start ">
                    <input type="text" class="searchInput mt-4" >
-                   <button type="button" class="searchBtn mt-4"><img src="https://cowellfashion.com/data/skin/cowell_pc_v1/images/custom/btn_search.png" width="30px" height="30px"></button>
+                   <button type="button" class="searchBtn mt-4">
+                   <img src="https://cowellfashion.com/data/skin/cowell_pc_v1/images/custom/btn_search.png" width="30px" height="30px"></button>
                 </div>
              </div>
           </div>

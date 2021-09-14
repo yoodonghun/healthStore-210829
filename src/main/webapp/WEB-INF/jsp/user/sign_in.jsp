@@ -79,37 +79,32 @@
 	$(document).ready(function() {
 		$("#signInBtn").on("click", function (e) {
 			e.preventDefault();
-
 			let loginId = $("input[name=loginId]").val().trim();
 			if (loginId == "") {
 				alert("아이디를 입력해주세요");
 				return;
 			}
-
 			let password = $("input[name=password]").val();
 			if (password == "") {
 				alert("비밀번호를 입력해주세요");
 				return;
 			}
-
+			
 			let url = $(this).attr("action");
 			let params = $(this).serialize();
-
+			
 			$.post(url, params).done(function (data) {
-
+				
 				console.log('data',data);
-
+				
 				if (data.result == "success") {
 					location.href = "/user/afterLogin_main_page_view";
 				} else {
-					alert("환영합니다 고객님");
+					alert("환영합니다 고객님 HIM-SSEN입니다");
 					location.href = "/user/afterLogin_main_page_view"
-				}else{
-					alert(d.error);
 				}
 			});
 		});
-
 	});
 </script>
 </body>
