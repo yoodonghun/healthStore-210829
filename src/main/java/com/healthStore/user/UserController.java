@@ -25,12 +25,6 @@ public class UserController {
 		return "template/layout";
 	}
 	
-	@RequestMapping("/afterLogin_main_page_view")
-	public String afterLoginMainPageView() {
-		
-		return "template/layout2";
-	}
-	
 	
 	
 	@RequestMapping("/sign_in_view")
@@ -93,5 +87,11 @@ public class UserController {
 	public String warningView() {
 		
 		return "other/warning";
+	}
+	
+	@RequestMapping("/detail_view")
+	public String detailView() {
+		
+		return "product/detail";
 	}
 }
