@@ -19,7 +19,7 @@
 		</header>
 
 		<nav>
-			<jsp:include page="../include/nav.jsp" />
+			<jsp:include page="../include/nav2.jsp" />
 		</nav>
 
 		<div>

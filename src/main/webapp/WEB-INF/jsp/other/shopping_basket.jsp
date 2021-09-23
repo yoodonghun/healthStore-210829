@@ -10,21 +10,36 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" type="text/css" href="/static/css/afterLogi
-n_style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/main_style.css">
 </head>
 <body>
    <div id="wrap">
        <header>
-          <jsp:include page="../include/gnb2.jsp" />
+          <jsp:include page="../include/gnb.jsp" />
        </header>
        
-        <nav>
-          <jsp:include page="../include/nav2.jsp" />
+       <nav>
+          <jsp:include page="../include/nav.jsp" />
        </nav>
-       <section>
-          <jsp:include page="../include/content2.jsp" />
-       </section>
+       
+       <div>
+         <div class=" d-flex justify-content-center">
+            <div class="emptyBox"></div>             
+         </div><br>
+         
+         <div class=" d-flex justify-content-center">
+            <div class="shoppingBasket">
+               <div class="basketText">장바구니</div>
+            </div>             
+         </div>
+        
+         <div class=" d-flex justify-content-center">
+            <div class="Basket">
+               <div class="basketText">장바구니</div>
+            </div>             
+         </div>
+       </div>
+       
    </div>
 </body>
 </html>
