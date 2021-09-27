@@ -21,8 +21,8 @@ nav {height: 70px; border-top:3px solid; border-bottom:1px solid; color:#000000}
 .bottom-imageBox{width:1550px; height: 700px;}
 
 a:hover{text-decoration:none}
-/*로그인 */
 
+/*sign In */
 .loginBox {width:1000px; height:150px; font-family:serif}
 .inputBox {width:1000px; height:80px; }
 .inputId {height:50px; border-left:0px; border-top:0px; border-right:0px}
@@ -30,7 +30,7 @@ a:hover{text-decoration:none}
 .signInBtn {width:416px; height:50px}
 .signUpBtn {width:416px; height:50px}
 
-/*회원가입*/
+/*sign Up*/
 .signUp{font-family:serif}
 .signUpInputBox{width:550px; height:1000px; }
 .signUpInput{height:70px}
@@ -50,11 +50,25 @@ a:hover{text-decoration:none}
 .uppertext{width:500px; height:500px; border:1px solid black; font-size:40px; font-family:serif; background-color:#000000;}
 
 
-/*shopping basket */
-.emptyBox{width:1500px; height:50px;}
-.shoppingBasket{width:1500px; height:50px;}
-.basketText{font-size:30px}
+/*cart */
+.emptyBox{width:1200px; height:100px;}
+.emptyBox1{width:1200px; height:30px;}
+.shoppingBasket{width:1200px; height:50px;}
+.basketText{font-size:40px}
+.basket{width:1200px; height: 400px; background-color:#ffffff; border:1px solid black; border-left:0px; border-right:0px}
+.saleBtn1{width:210px; height:80px; background-color:#000000; font-size:25px}
+.saleBtn2{width:210px; height:80px; background-color:#ffffff; font-size:25px}
 
+/*detail view*/
+.detailImageBox{width:1500px; height:700px; }
+.product{width:600px; height:600px; }
+.detailBox{width:500px; height:700px; }
+.centerEmpty{width:200px; height:600px;}
+.productName{font-size:40px}
+.productPrice{font-size:30px}
+.cartBtn {width:250px; height:80px; font-size:25px}
+.buyBtn {width:250px; height:80px; background-color:#c43c5e; font-size:25px}
+.reviewText{width:1500px; height:60px; font-size:50px}
 
 
 

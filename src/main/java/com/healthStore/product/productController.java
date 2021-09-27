@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/product")
 @Controller
-public class productController {
+public class ProductController {
 
 	@RequestMapping("/himssen_upperBody_view")
 	public String upperView() {		
@@ -22,5 +22,11 @@ public class productController {
 	public String abdominalView() {		
 		
 		return "part/abdominal";
+	}
+	
+	@RequestMapping("/detail_view")
+	public String detailView() {
+		
+		return "part/detail";
 	}
 }

@@ -27,7 +27,7 @@
 				id="signUp" class="nav-link top-menu-font text-dark">회원가입</a></li>
 			<li class="nav-item"><a href="/user/sign_in_view"
 				id="signOut" class="nav-link top-menu-font text-dark">로그인</a></li>
-			<li class="nav-item"><a href="/user/shopping_basket_view"
+			<li class="nav-item"><a href="/user/cart_view"
 				id="cart" class="nav-link top-menu-font text-dark">장바구니</a></li>
 		</ul>
 	</nav>

@@ -60,7 +60,7 @@
 					<div class="product">
 						<img src="https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/pd/21/7/7/4/4/1/8/kjCIV/3713774418_B.jpg" alt="" width="450px" height="450px">
 						<div class="font-weight-bold mt-4"><a href="" class="text-blue"><h3>하체운동 미니 바이크 자전거 스텝퍼</h3></a></div><br>
-						<div class="text-danger"><h4>35,000</h4></div>
+						<div class="text-danger"><h4>35,000원</h4></div>
 					</div>
 				   </div>
 				</div>

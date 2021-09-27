@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="/static/css/main_style.css">
 </head>
 <body>
-   <div id="wrap">
+     <div id="wrap">
        <header>
           <jsp:include page="../include/gnb.jsp" />
        </header>
@@ -30,14 +30,33 @@
          <div class=" d-flex justify-content-center">
             <div class="shoppingBasket">
                <div class="basketText">장바구니</div>
-            </div>             
+            </div>              
          </div>
         
          <div class=" d-flex justify-content-center">
-            <div class="Basket">
-               <div class="basketText">장바구니</div>
-            </div>             
+            <div class="basket mt-4">
+               <table class="table">
+                  <thead>
+                     <ul>
+                       <li></li>
+                       <li></li>
+                       <li></li>
+                     </ul>
+                  </thead>
+                  <tbody>
+                  
+                  </tbody>
+               </table>
+            </div>                         
          </div>
+         
+         <div class=" d-flex justify-content-center">
+            <div class="btnBox d-flex">
+              <button type="button" class="saleBtn1 mt-4 text-white mr-2">상품 주문</button>
+              <a href="/user/main_page_view"><button type="button" class="saleBtn2 mt-4 text-black">쇼핑 계속하기</button></a>
+              
+            </div>
+         </div>         
        </div>
        
    </div>
