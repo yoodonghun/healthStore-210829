@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="/static/css/main_style.css">
 </head>
 <body>
-   <div id="wrap">
+   <div id="wrap" >
        <header>
           <jsp:include page="../include/gnb.jsp" />
        </header>
