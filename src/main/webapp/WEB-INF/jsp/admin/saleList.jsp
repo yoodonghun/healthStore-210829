@@ -33,7 +33,7 @@
            <div>
 	           <div class="d-flex justify-content-center ml-4 mt-4">
 	             <div class="innerBox">
-	                <div class="topEmptyBox"></div>
+	               
 	                <div class="topText ml-4 mb-2">판매 목록</div>
 	                <hr>
 	                <div class="topEmptyBox"></div>
