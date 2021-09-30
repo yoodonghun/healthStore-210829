@@ -37,11 +37,7 @@
             <div class="basket mt-4">
                <table class="table">
                   <thead>
-                     <ul>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                     </ul>
+                     
                   </thead>
                   <tbody>
                   

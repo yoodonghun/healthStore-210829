@@ -28,8 +28,8 @@ a:hover{text-decoration:none}
 .inputBox {width:1000px; height:80px; }
 .inputId {height:50px; border-left:0px; border-top:0px; border-right:0px}
 .inputPw {height:50px; border-left:0px; border-top:0px; border-right:0px}
-.signInBtn {width:416px; height:50px}
-.signUpBtn {width:416px; height:50px}
+.signInBtn {width:416px; height:50px; }
+.signUpBtn {width:416px; height:50px; background-color:#c43c5e;}
 
 /*sign Up*/
 .signUp{font-family:serif}
@@ -49,6 +49,13 @@ a:hover{text-decoration:none}
 .productBox {width:1550px; height:600px;} 
 
 .uppertext{width:500px; height:500px; border:1px solid black; font-size:40px; font-family:serif; background-color:#000000;}
+
+/*warning page*/
+.backBtn{width:600px}
+.empty{width:100px}
+
+
+
 
 
 /*cart */
@@ -70,6 +77,8 @@ a:hover{text-decoration:none}
 .cartBtn {width:250px; height:80px; font-size:25px}
 .buyBtn {width:250px; height:80px; background-color:#c43c5e; font-size:25px}
 .reviewText{width:1500px; height:60px; font-size:50px}
+
+.table{width:1900px; height:500px;}
 
 
 

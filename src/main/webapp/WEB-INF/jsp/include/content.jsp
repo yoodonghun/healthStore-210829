@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 
   <div>
      <div class="d-flex justify-content-center mt-4">
@@ -40,11 +40,14 @@
 				<div>
 				  <div class="bottom-imageBox d-flex justify-content-between">
 					<div class="detail1">
+					 <c:forEach var="item" items="${productList}">
+					   ${item.productName}
+					 </c:forEach>
 						<a href="/product/detail_view" class="text-blue">
 						<img src="https://image.g9.co.kr/g/2173112733/n?ts=1627629743000" alt="" width="450px" height="450px">
 					   	<div class="font-weight-bold mt-4"><h4>딥스바 푸쉬업바 가정용 헬스기구</h4></div></a><br>
 						<div class="text-danger"><h4>75,300원</h4></div>
-					   
+					    
 					</div>
 
 					<div class="detail2">
@@ -64,12 +67,33 @@
 				</div>
 				      
 	       </div>
-       </div>         
-     
-     
-     </div>
-     
-  </div>
+       </div>
+
+<div>
+	<table class="table">
+		<thead>
+			<tr>
+				<td>상품 id</td>
+				<td>상품이름</td>
+				<td>가격</td>
+
+			</tr>
+		</thead>
+		<c:forEach var="item" items="${productList}">
+			<tbody>
+				<tr>
+					<th>${item.productId}</th>
+					<th>${item.productName}</th>
+					<th>${item.price}</th>
+
+				</tr>
+			</tbody>
+		</c:forEach>
+	</table>
+</div>
+
+
+
 				      
 
       

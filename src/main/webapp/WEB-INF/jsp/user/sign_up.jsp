@@ -15,7 +15,7 @@
 <body>
 	<div id="wrap">
 		<header>
-			<jsp:include page="../include/gnb.jsp" />
+			<jsp:include page="../include/logo.jsp" />
 		</header>
 
 		<nav>

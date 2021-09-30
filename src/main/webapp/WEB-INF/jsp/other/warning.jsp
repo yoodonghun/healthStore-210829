@@ -15,16 +15,30 @@
 <body>
    <div id="wrap">
        <header>
-          <jsp:include page="../include/gnb.jsp" />
+          <jsp:include page="../include/logo.jsp" />
        </header>
        
        <nav>
-          <jsp:include page="../include/nav.jsp" />
+          
        </nav>
       <div>
         <div class="d-flex justify-content-center mt-4">
-       <div class="warningBox">
-         <div class="display-4 mt-4">로그인 후 사용해주세요</div>        
+           <div class="warningBox">
+            <div class="emptyBox"></div>
+         <div class="display-4 mt-4 text-center">로그인 후 사용해주세요</div>      
+         <div class="emptyBox"></div>
+         <div class="d-flex justify-content-center mt-4">
+           <div class="backBtn d-flex "> 
+            <div>            
+             <a href="/user/sign_in_view">
+             <button type="button" class="signInBtn form-control mr-4">
+             로그인</button></a>
+             <div class="empty"></div>
+             <a href="/user/sign_up_view">
+             <button type="button" class="signUpBtn form-control text-white">회원가입</button></a>
+            </div>
+           </div>
+         </div>  
        </div> 
      </div>
       </div>
