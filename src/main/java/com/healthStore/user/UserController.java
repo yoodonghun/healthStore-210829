@@ -19,14 +19,6 @@ public class UserController {
 	@Autowired
 	private UserBO userBO;
 
-	@RequestMapping("/main_page_view")
-	public String main() {
-		
-		return "template/layout";
-	}
-	
-	
-	
 	@RequestMapping("/sign_in_view")
 	public String signInView(Model model) {
 		model.addAttribute("viewName", "user/sign_in");
@@ -72,11 +64,7 @@ public class UserController {
 		return "other/warning";
 	}
 	
-	@RequestMapping("/cart_view")
-	public String customerServiceView() {
-		
-		return "other/cart";
-	}
+	
 	
 	
 	

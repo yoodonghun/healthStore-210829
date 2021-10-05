@@ -17,7 +17,8 @@ public interface ProductDAO {
 			@Param("imagePath") String imagePath);
 	
 	public List<Product> selectProductDetail(
-			@Param("productName") String productName,
-			@Param("price") int price,
-			@Param("imagePath") String imagePath);
+//			@Param("productName") String productName,
+//			@Param("price") int price,
+//			@Param("imagePath") String imagePath);
+			);
 }

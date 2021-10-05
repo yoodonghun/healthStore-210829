@@ -28,7 +28,6 @@
     </insert>
      <select id="selectProductDetail" resultType="com.healthStore.product.model.Product">
        SELECT
-       
             `id`
            ,`productId`
            ,`productName`
@@ -39,11 +38,7 @@
            ,`updatedAt` 
       FROM
           `product`
-      WHERE
-          `productName` = #{productName}
-          AND `price` = #{price}
-          AND `imagePath` = #{imagePath}
-      LIMIT 1
+      
       
               
     </select>

@@ -28,8 +28,8 @@
          <div class="display-4 mt-4 text-center">로그인 후 사용해주세요</div>      
          <div class="emptyBox"></div>
          <div class="d-flex justify-content-center mt-4">
-           <div class="backBtn d-flex "> 
-            <div>            
+            
+            <div class="backBtn d-flex" >            
              <a href="/user/sign_in_view">
              <button type="button" class="signInBtn form-control mr-4">
              로그인</button></a>

@@ -52,8 +52,8 @@
                  <br><br>
                  
                  <div class="d-flex mt-4 ">
-                  <button type="submit" class="cartBtn btn-secondary mr-2">장바구니</button>
-                  <button type="submit" class="buyBtn text-white">구매하기</button>
+                  <button type="submit" class="cartBtn btn-secondary mr-2 form-control">장바구니</button>
+                  <button type="submit" class="buyBtn text-white form-control">구매하기</button>
                  </div>                 
                </div>              
              </div>                                               

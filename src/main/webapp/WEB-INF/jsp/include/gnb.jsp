@@ -14,7 +14,7 @@
 	<div class="d-flex justify-content-center col-4 mt-3">
 		<div class="mainLogo">
 			<div class="display-4">
-				<a href="/user/main_page_view" class="text-dark">HIM-SSEN</a>
+				<a href="/product/main_page_view" class="text-dark">HIM-SSEN</a>
 			</div>
 			
 		</div>
@@ -23,11 +23,10 @@
 
 	<nav class="top-menu d-flex justify-content-end col-4 mt-5">
 		<ul class="nav">
- 			<li class="nav-item"><a href="/user/sign_up_view"
-				id="signUp" class="nav-link top-menu-font text-dark">회원가입</a></li>
+ 			
 			<li class="nav-item"><a href="/user/sign_in_view"
-				id="signOut" class="nav-link top-menu-font text-dark">로그인</a></li>
-			<li class="nav-item"><a href="/user/cart_view"
+				id="signOut" class="nav-link top-menu-font text-dark">로그아웃</a></li>
+			<li class="nav-item"><a href="/product/cart_view"
 				id="cart" class="nav-link top-menu-font text-dark">장바구니</a></li>
 		</ul>
 	</nav>

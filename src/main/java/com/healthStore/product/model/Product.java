@@ -5,7 +5,7 @@ import java.util.Date;
 public class Product {
 	private int id;
 	private int productId;
-	private String productname;
+	private String productName;
 	private int price;
 	private String part;
 	private String imagePath;
@@ -28,12 +28,12 @@ public class Product {
 		this.productId = productId;
 	}
 
-	public String getProductname() {
-		return productname;
+	public String getProductName() {
+		return productName;
 	}
 
-	public void setProductname(String productname) {
-		this.productname = productname;
+	public void setProductName(String productname) {
+		this.productName = productname;
 	}
 
 	public int getPrice() {

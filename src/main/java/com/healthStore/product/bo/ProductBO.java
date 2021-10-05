@@ -11,14 +11,17 @@ import com.healthStore.product.model.Product;
 @Service
 public class ProductBO {
 
-	 @Autowired
-	    private ProductDAO productDAO;
-		
-	    public int insertProduct(int productId,String productName, int price, String imagePath) {
-			return productDAO.insertProduct(productId,productName,price,imagePath);
-		}
-		
-		public List<Product> getProductDetail(String productName, int price, String imagePath){
-			return productDAO.selectProductDetail(productName,price,imagePath);
-		}
+	@Autowired
+	private ProductDAO productDAO;
+
+	public int insertProduct(int productId, String productName, int price, String imagePath) {
+		return productDAO.insertProduct(productId, productName, price, imagePath);
+	}
+
+//	public List<Product> getProductDetail(String productName, int price, String imagePath) {
+//		return productDAO.selectProductDetail(productName, price, imagePath);
+//	}
+	public List<Product> getProductDetail() {
+		return productDAO.selectProductDetail();
+	}
 }
