@@ -36,7 +36,7 @@
 	             <div class="innerBox">
 	                <div class="topEmptyBox"></div>
 	                <div class="topText ml-4 mb-2">회원 목록</div>
-	                <hr>
+	                
 	                
 	                
 	                <div>
@@ -44,18 +44,20 @@
 	                     <thead>
 	                       <tr class="text-center">
 	                         <th class="col-1">No.</th>
-	                         <th class="col-2">Name</th>
 	                         <th class="col-3">Id</th>
+	                         <th class="col-2">Name</th>
 	                         <th class="col-6">Email</th>
 	                       </tr>
 	                     </thead>
 	                     <tbody>
+	                     <c:forEach var="user" items="${userList}">
 	                       <tr class="text-center">
-	                         <td>ㅇㅇ</td>
-	                         <td>ㅇㅇ</td>
-	                         <td>ㅇㅇ</td>
-	                         <td>ㅇㅇ</td>
+	                         <td>${user.id}</td>
+	                         <td>${user.loginId}</td>
+	                         <td>${user.name}</td>
+	                         <td>${user.email}</td>
 	                       </tr>
+	                      </c:forEach> 
 	                     </tbody>
 	                  </table>
 	                </div>

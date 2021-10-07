@@ -34,7 +34,7 @@
            <div>
 	           <div class="d-flex justify-content-center ml-4 mt-4">
 	             <div class="innerBox">
-	               
+	               <div class="topEmptyBox"></div>
 	                <div class="topText ml-4 mb-2">판매 목록</div>
 	               
 	                
@@ -51,10 +51,10 @@
 	                     <tbody>
 	                     <c:forEach var="item" items="${productDetail}">
 	                       <tr class="text-center">
-	                         <td>ㅇㅇ</td>
-	                         <td>ㅇㅇ</td>
-	                         <td>ㅇㅇ</td>
-	                         <td>ㅇㅇ</td>
+	                         <td>${item.productId}</td>
+	                         <td>${item.productName}</td>
+	                         <td>${item.price}원</td>
+	                         <td>${item.part}</td>
 	                       </tr>
 	                       </c:forEach>
 	                     </tbody>

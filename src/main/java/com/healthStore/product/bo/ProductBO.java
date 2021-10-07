@@ -14,7 +14,7 @@ public class ProductBO {
 	@Autowired
 	private ProductDAO productDAO;
 
-	public int insertProduct(int productId, String productName, int price, String imagePath) {
+	public int insertProduct(Integer productId, String productName, Integer price, String imagePath) {
 		return productDAO.insertProduct(productId, productName, price, imagePath);
 	}
 
@@ -23,5 +23,9 @@ public class ProductBO {
 //	}
 	public List<Product> getProductDetail() {
 		return productDAO.selectProductDetail();
+	}
+	
+	public Product getDetail(int productId) {
+		return productDAO.selectDetail(productId);
 	}
 }

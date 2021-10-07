@@ -9,7 +9,7 @@
     </appender>
 
     <!-- Logger -->
-    <logger name="com.health_store" level="DEBUG" appender-ref="console" />
+    <logger name="com.health-store" level="DEBUG" appender-ref="console" />
 
     <!-- Root Logger -->
     <root level="info">
