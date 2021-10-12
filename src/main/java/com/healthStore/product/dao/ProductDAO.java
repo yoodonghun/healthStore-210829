@@ -13,7 +13,7 @@ public interface ProductDAO {
 	public int insertProduct(
 			@Param("productId") Integer productId,
 			@Param("productName") String productName,
-			@Param("price") Integer price,
+			@Param("price") int price,
 			@Param("imagePath") String imagePath);
 	
 	public List<Product> selectProductDetail(
@@ -23,7 +23,7 @@ public interface ProductDAO {
 			);
 	
 	public Product selectDetail(
-			@Param("productId") int productId);
+			@Param("productId") Integer productId);
 	
 	
 }

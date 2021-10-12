@@ -14,18 +14,16 @@ public class ProductBO {
 	@Autowired
 	private ProductDAO productDAO;
 
-	public int insertProduct(Integer productId, String productName, Integer price, String imagePath) {
+	public int insertProduct(Integer productId, String productName, int price, String imagePath) {
 		return productDAO.insertProduct(productId, productName, price, imagePath);
 	}
 
-//	public List<Product> getProductDetail(String productName, int price, String imagePath) {
-//		return productDAO.selectProductDetail(productName, price, imagePath);
-//	}
+
 	public List<Product> getProductDetail() {
 		return productDAO.selectProductDetail();
 	}
 	
-	public Product getDetail(int productId) {
+	public Product getDetail(Integer productId) {
 		return productDAO.selectDetail(productId);
 	}
 }

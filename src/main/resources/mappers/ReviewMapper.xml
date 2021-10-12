@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.healthStore.product.dao.ReviewDAO">
+    <insert id="insertReview" parameterType="map">
+       INSERT INTO `review`
+       (
+          `id`
+          ,`reviewId`
+          ,`writer`
+          ,`grade`
+          ,`review`
+          ,`createdAt`
+          ,`updatedAt`
+       )
+       VALUES
+       (
+          #{reviewId}
+          ,#{writer}
+          ,#{grade}
+          ,#{review}
+          ,NOW()
+          ,NOW()
+       )
+    </insert>
+    
+    <select id="selectReview" parameterType="int" resultType="com.healthStore.product.model.Review">
+       SELECT
+           `id`
+          ,`reviewId`
+          ,`writer`
+          ,`grade`
+          ,`review`
+          ,`createdAt`
+          ,`updatedAt`
+       FROM
+          `review`
+       WHERE
+          `reviewId` = #{reviewId}
+       
+    </select>
+ </mapper>
+ 
+ 

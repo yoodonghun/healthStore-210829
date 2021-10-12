@@ -12,22 +12,23 @@
     <table class="table">
        <thead>
          <tr>
-           <td>상품 id</td>
-           <td>상품이름</td>
+           <td>작성자</td>          
            <td>가격</td>
+           <td>리뷰</td>
            
          </tr>
        </thead>
-       <c:forEach var="item" items="${productList}">
+       
 	       <tbody>
 	          <tr>
-	            <th>${item.productId}</th>
-	            <th>${item.productName}</th>
-	            <th>${item.price}</th>
+	            
+	            <th>${review.writer}</th>
+	            <th>${review.grade}</th>
+	            <th>${review.review}</th>
 	            
 	          </tr>
 	       </tbody>
-       </c:forEach>
+       
     </table>
   </div>
 </body>

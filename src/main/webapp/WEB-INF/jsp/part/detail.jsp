@@ -53,8 +53,7 @@
                     <div class="ml-2 col-9">5,000원 쿠폰 지급</div>
                  </div><br><br><br><br><br>
                  <hr>
-                 <br><br>
-                 
+                                  
                  <div class="d-flex mt-4 ">
                   <button type="submit" class="cartBtn btn-secondary mr-2 form-control">장바구니</button>
                   <button type="submit" class="buyBtn text-white form-control">구매하기</button>
@@ -76,11 +75,28 @@
        <div>
           <div class=" d-flex justify-content-center">
              <div class="reviewText justify-content-start">
-                <div>review</div>
-                <hr>
-                
-             </div>
+                <div>review</div>               
+
+					<table class="table mt-3">
+						<thead>
+						  <tr>
+						    <th>작성자</th>
+						    <th>평점</th>
+						    <th>리뷰</th>
+						  </tr>
+						  
+						</thead>
+						<tbody>						 
+							  <tr>
+							    <td>${review.writer}</td>
+							    <td>${review.grade}원</td>
+							    <td>${review.review}</td>
+							  </tr>						 
+						</tbody>
+					</table>
+				</div>
           </div>
+          
        </div>  
    </div>
 </body>

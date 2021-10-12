@@ -49,7 +49,7 @@
          <div class=" d-flex justify-content-center">
             <div class="btnBox d-flex">
               <button type="button" class="saleBtn1 mt-4 text-white mr-2">상품 주문</button>
-              <a href="/user/main_page_view"><button type="button" class="saleBtn2 mt-4 text-black">쇼핑 계속하기</button></a>
+              <a href="/product/main_page_view"><button type="button" class="saleBtn2 mt-4 text-black">쇼핑 계속하기</button></a>
               
             </div>
          </div>         

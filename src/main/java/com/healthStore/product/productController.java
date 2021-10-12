@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.healthStore.product.bo.ProductBO;
+import com.healthStore.product.bo.ReviewBO;
 import com.healthStore.product.model.Product;
+import com.healthStore.product.model.Review;
 
 @RequestMapping("/product")
 @Controller
@@ -17,6 +19,10 @@ public class ProductController {
 
 	@Autowired
 	private ProductBO productBO;
+	
+	
+	@Autowired
+	private ReviewBO reviewBO;
 
 	@RequestMapping("/main_page_view")
 	public String main(Model model) {
@@ -52,17 +58,22 @@ public class ProductController {
 	@RequestMapping("/detail_view")
 	public String detailView(
 			@RequestParam(value = "productId", required =
-					false) int productId ,			
-			Model model ) {
+					false) Integer productId ,
+			@RequestParam(value = "reviewId", required =
+					false) Integer reviewId,
+			Model model) {
+		
 		Product detail = productBO.getDetail(productId);
 		model.addAttribute("detail", detail);
-		detail.setProductId(detail.getProductId());
-			
-
+					
+		Review review = reviewBO.getReview(reviewId); 
+		model.addAttribute("review", review);
+		
+		
+		
 		return "part/detail";
 	}
-
-
+		
 	@RequestMapping("/cart_view")
 	public String customerServiceView() {
 
@@ -70,7 +81,6 @@ public class ProductController {
 	}
 
 	@RequestMapping("/productDetail")
-//	public String productDetail(String productName, int price, String imagePath, Model model) {
 	public String productDetail(Model model) {
 		List<Product> productDetail = productBO.getProductDetail();
 		model.addAttribute("productDetail", productDetail);
