@@ -74,8 +74,8 @@ a:hover{text-decoration:none}
 .centerEmpty{width:200px; height:600px;}
 .productName{font-size:40px}
 .productPrice{font-size:30px}
-.cartBtn {width:250px; height:80px; font-size:25px}
-.buyBtn {width:250px; height:80px; background-color:#c43c5e; font-size:25px}
+.buyBtn {width:250px; height:80px; font-size:25px}
+.cancleBtn {width:250px; height:80px; background-color:#c43c5e; font-size:25px}
 .reviewText{width:1500px; height:60px; font-size:50px}
 
 

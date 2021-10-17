@@ -59,31 +59,24 @@ public class ProductController {
 	public String detailView(
 			@RequestParam(value = "productId", required =
 					false) Integer productId ,
-			@RequestParam(value = "reviewId", required =
-					false) Integer reviewId,
 			Model model) {
 		
 		Product detail = productBO.getDetail(productId);
 		model.addAttribute("detail", detail);
+		
+		List<Review> reviewList = reviewBO.getReviewList(productId);
+		model.addAttribute("reviewList", reviewList);
 					
-		Review review = reviewBO.getReview(reviewId); 
-		model.addAttribute("review", review);
+		Review reviewDetail = reviewBO.getReview(productId); 
+		model.addAttribute("reviewDetail", reviewDetail);			
+		
 		
 		
 		
 		return "part/detail";
 	}
 		
-	@RequestMapping("/cart_view")
-	public String customerServiceView() {
+	
 
-		return "other/cart";
-	}
-
-	@RequestMapping("/productDetail")
-	public String productDetail(Model model) {
-		List<Product> productDetail = productBO.getProductDetail();
-		model.addAttribute("productDetail", productDetail);
-		return "include/content";
-	}
+	
 }

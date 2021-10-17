@@ -7,7 +7,7 @@
        INSERT INTO `review`
        (
           `id`
-          ,`reviewId`
+          ,`productId`
           ,`writer`
           ,`grade`
           ,`review`
@@ -16,7 +16,7 @@
        )
        VALUES
        (
-          #{reviewId}
+          #{productId}
           ,#{writer}
           ,#{grade}
           ,#{review}
@@ -25,10 +25,26 @@
        )
     </insert>
     
-    <select id="selectReview" parameterType="int" resultType="com.healthStore.product.model.Review">
+    <select id="selectReviewList" resultType="com.healthStore.product.model.Review">
        SELECT
            `id`
-          ,`reviewId`
+          ,`productId`
+          ,`writer`
+          ,`grade`
+          ,`review`
+          ,`createdAt`
+          ,`updatedAt`
+       FROM
+          `review`
+         
+       
+       
+    </select>
+    
+    <select id="selectReview" parameterType="Integer" resultType="com.healthStore.product.model.Review">
+       SELECT
+           `id`
+          ,`productId`
           ,`writer`
           ,`grade`
           ,`review`
@@ -37,7 +53,9 @@
        FROM
           `review`
        WHERE
-          `reviewId` = #{reviewId}
+          `productId` = #{productId} 
+       
+       
        
     </select>
  </mapper>

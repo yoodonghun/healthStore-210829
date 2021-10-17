@@ -4,23 +4,24 @@ import java.util.Date;
 
 public class Review {
 	private int id;
-	private int reviewId;
+	private int productId;
 	private String writer;
 	private double grade;
 	private String review;
 	private Date createdAt;
 	private Date updatedAt;
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getReviewId() {
-		return reviewId;
+	public int getProductId() {
+		return productId;
 	}
-	public void setReviewId(int reviewId) {
-		this.reviewId = reviewId;
+	public void setProductId(int productId) {
+		this.productId = productId;
 	}
 	public String getWriter() {
 		return writer;

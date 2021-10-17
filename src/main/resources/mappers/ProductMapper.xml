@@ -43,7 +43,7 @@
               
     </select>
     
-    <select id="selectDetail" parameterType="int" resultType="com.healthStore.product.model.Product">
+    <select id="selectDetail" parameterType="String" resultType="com.healthStore.product.model.Product">
       SELECT
           `id`
            ,`productId`
@@ -55,7 +55,7 @@
            ,`updatedAt`  
       FROM
          `product`
-      Where   
+      WHERE   
          `productId` = #{productId} 
         
     </select>

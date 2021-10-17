@@ -24,4 +24,6 @@ public class DBController {
 
 	        return sessionFactory.getObject();
 	    }
+	 
+	 
 }

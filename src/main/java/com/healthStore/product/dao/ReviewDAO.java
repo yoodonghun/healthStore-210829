@@ -1,5 +1,7 @@
 package com.healthStore.product.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -9,10 +11,12 @@ import com.healthStore.product.model.Review;
 public interface ReviewDAO {
    
 	public int insertReview(
-			@Param("reviewId") Integer reviewId
+			@Param("productId") Integer productId
 			,@Param("writer") String writer
 			,@Param("grade") double grade
 			,@Param("review") String review);
+	
+	public List<Review> selectReviewList(@Param("productId") Integer productId);
 
-	public Review selectReview(@Param("reviewId") Integer reviewId);
+	public Review selectReview(@Param("productId") Integer productId);
 }

@@ -55,8 +55,8 @@
                  <hr>
                                   
                  <div class="d-flex mt-4 ">
-                  <button type="submit" class="cartBtn btn-secondary mr-2 form-control">장바구니</button>
-                  <button type="submit" class="buyBtn text-white form-control">구매하기</button>
+                  <button type="submit" class="buyBtn btn-secondary mr-2 form-control">구매하기</button>
+                  <button type="submit" class="cancleBtn text-white form-control">취소하기</button>
                  </div>                 
                </div>
                           
@@ -86,13 +86,17 @@
 						  </tr>
 						  
 						</thead>
-						<tbody>						 
-							  <tr>
-							    <td>${review.writer}</td>
-							    <td>${review.grade}원</td>
-							    <td>${review.review}</td>
-							  </tr>						 
-						</tbody>
+						
+						<tbody>	
+											 
+							  <tr>							   
+							    <td>${reviewList.writer}</td>
+							    <td>${reviewList.grade}</td>
+							    <td>${reviewList.review}</td>
+							  </tr>			
+							 				  					
+						</tbody>						
+						
 					</table>
 				</div>
           </div>

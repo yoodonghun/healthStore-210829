@@ -27,6 +27,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper' 
 	implementation 'javax.servlet:jstl:1.2'
+	implementation 'org.springframework.session:spring-session-core'
+	implementation("io.swagger:swagger-annotations:1.5.21")
+    implementation("io.swagger:swagger-models:1.5.21")
 }
 
 test {
