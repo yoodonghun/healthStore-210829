@@ -64,7 +64,7 @@ public class ProductController {
 		Product detail = productBO.getDetail(productId);
 		model.addAttribute("detail", detail);
 		
-		List<Review> reviewList = reviewBO.getReviewList(productId);
+		List<Review> reviewList = reviewBO.getReviewList();
 		model.addAttribute("reviewList", reviewList);
 					
 		Review reviewDetail = reviewBO.getReview(productId); 

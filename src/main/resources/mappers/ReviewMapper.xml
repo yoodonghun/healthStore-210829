@@ -41,7 +41,7 @@
        
     </select>
     
-    <select id="selectReview" parameterType="Integer" resultType="com.healthStore.product.model.Review">
+    <select id="selectReview" parameterType="int" resultType="com.healthStore.product.model.Review">
        SELECT
            `id`
           ,`productId`

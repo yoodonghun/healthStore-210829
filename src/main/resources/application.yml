@@ -8,7 +8,12 @@ spring:
     static-path-pattern: /static/**
     view:
       prefix: /WEB-INF/jsp/
-      suffix: .jsp  
+      suffix: .jsp
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1000MB
+      max-request-size: 1000MB      
       
 server:
   port: 80

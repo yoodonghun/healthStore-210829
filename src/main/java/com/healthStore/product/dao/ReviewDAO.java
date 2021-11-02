@@ -16,7 +16,7 @@ public interface ReviewDAO {
 			,@Param("grade") double grade
 			,@Param("review") String review);
 	
-	public List<Review> selectReviewList(@Param("productId") Integer productId);
+	public List<Review> selectReviewList();
 
 	public Review selectReview(@Param("productId") Integer productId);
 }

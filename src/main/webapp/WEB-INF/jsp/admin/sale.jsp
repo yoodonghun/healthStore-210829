@@ -45,10 +45,10 @@
 	                       <div class="centerEmpty"></div>
 	                       
 	                       <div class="detailBox">
-	                         <input type="text" class="nameInput form-control" placeholder="상품 이름">
+	                         <input type="text" name="productName" class="form-control" placeholder="상품 이름">
 	                         
 	                         <div class="d-flex mt-4">
-	                           <input type="text" class="priceInput form-control mr-4" placeholder="상품 가격">
+	                           <input type="text" name="price" class="form-control mr-4" placeholder="상품 가격">
 	                           <div class="mt-2">원</div>
 	                         </div>
 	                         
@@ -58,19 +58,19 @@
 	                         </div>
 	                           
 	                         <div class="d-flex mt-4">
-	                           <div class="deleveryPrice  mr-4">혜택</div>
-	                           <div class="ml-4">5,000원 쿠폰 지급</div>
+	                           <div class="benefits  mr-4">혜택</div>
+	                           <div class="ml-4"> 회원가입 시 5,000원 쿠폰 지급</div>
 	                         </div>
 	                         
 	                         <div class="file-upload btn clearfix mt-4 ">
-	                           <input id="file" type="file" class="float-right mr-3" accept=".jpg,.jpeg,.png,.gif">
+	                           <input id="image" name="image" type="file" class="float-right mr-3" accept=".jpg,.jpeg,.png,.gif">
 	                         </div>
 	                          
 	                         
 	                         <div class="registration d-flex  mt-4">
-	                            <button type="submit" class="registBtn form-control col-6 mr-2 text-white">등록하기</button>
+	                           <button type="button" id="cancleBtn" class=" form-control col-6">모두 지우기</button>
 	                            
-	                            <button type="submit" class="cancleBtn form-control col-6"><a href="/admin/adminInfo_view" class="text-white">취소하기</a></button>
+	                            <button type="submit" id="registBtn" class=" form-control col-6 mr-2 text-white">등록하기</button>
 	                         </div>  
 	                       </div>
 	                    </div>
@@ -80,10 +80,69 @@
 
 	             </div>
 	           </div>
-         </div>
+           </div>
          </div>       
       </div>
    </div>
+   
+   <script>
+      $(document).ready(function(){   	     	 
+    	 $("#cancleBtn").on("click", function(){
+    		 $("input[name=productName]").val('');
+    		 $("input[name=price]").val('');
+    		 $("input[name=image]").val('');
+    		 
+    	 });
+    	 
+    	  $("#registBtn").on("click", function(){
+    		 let productName = $('input[name=productName]').val().trim();
+    		 if(productName == ''){
+    			 alert("상품 이름을 입력해주세요");
+    			 return;
+    		 }
+    		 
+    		 let price = $('input[name=price]').val().trim();
+    		 if(price == ''){
+    			 alert("가격을 입력해주세요");
+    			 return;
+    		 } 
+    		 
+    		 let file = $('input[name=image]').val();
+    		 
+    		 if (file != ''){
+    			 let ext = file.split('.').pop().toLowerCase();
+    			 if ($.inArray(ext, ['gif', 'jpg', 'jpeg', 'png']) == -1) {
+    				 alert("gif, jpg, jpeg, png 파일만 업로드 할 수 있습니다");
+    				 $("input[name=image]").val('');
+    				 return;
+    			 }
+    		 }
+    		 
+    		 let formData = new FormData();
+    		 formData.append("productName", productName);
+    		 formData.append("price", price);
+    		 formData.append("file", $('input[name=image]')[0].files[0]);
+    		 
+    		 $.ajax({
+    			      url:"/post/create"
+    				 ,method: 'post'
+    				 ,data: formData
+    				 ,processData: false
+    				 ,contentType: false
+    				 ,enctype: 'multipart/form-data'
+    				 ,success: function(data) {
+    					 if(data.result == 'success'){
+    						 alert("상품이 등록되었습니다");
+    						 location.href = "/product/main_page_view"
+    					 }
+    				 }
+    		         ,error: function(e){
+    		        	 alert("상품 등록에 실패했습니다. ");
+    		         }
+    		 });
+    	 }); 
+      });
+   </script>
 </body>
 </html>
      

@@ -50,13 +50,13 @@
                  
                  <div class="d-flex">
                     <div class="ml-2 font-weight-bold col-3">혜택</div>
-                    <div class="ml-2 col-9">5,000원 쿠폰 지급</div>
+                    <div class="ml-2 col-9">회원가입 시 5,000원 쿠폰 지급</div>
                  </div><br><br><br><br><br>
                  <hr>
                                   
                  <div class="d-flex mt-4 ">
-                  <button type="submit" class="buyBtn btn-secondary mr-2 form-control">구매하기</button>
-                  <button type="submit" class="cancleBtn text-white form-control">취소하기</button>
+                  <button type="submit" id="buyBtn" class="buyBtn btn-secondary mr-2 form-control">구매하기</button>
+                  <a href="/product/main_page_view"><button type="submit" class="cancleBtn text-white form-control">취소하기</button></a>
                  </div>                 
                </div>
                           
@@ -90,9 +90,9 @@
 						<tbody>	
 											 
 							  <tr>							   
-							    <td>${reviewList.writer}</td>
-							    <td>${reviewList.grade}</td>
-							    <td>${reviewList.review}</td>
+							    <td>${reviewDetail.writer}</td>
+							    <td>${reviewDetail.grade}</td>
+							    <td>${reviewDetail.review}</td>
 							  </tr>			
 							 				  					
 						</tbody>						
@@ -103,5 +103,23 @@
           
        </div>  
    </div>
+   
+   <script language="javascript">
+      $(document).ready(function(){
+    	  $("#buyBtn").on("click",function(e){
+    		  e.preventDefault();    	
+    		  
+    		 if(confirm('상품을 구매하시겠습니까?')){
+    			 alert("구매가 완료되었습니다. 메인화면으로 돌아갑니다")
+    			 location.href="/product/main_page_view"
+    		 }else {
+    			 alert("구매가 취소되었습니다.")
+    			 
+    		 }
+    		  
+    		  
+    	  });
+      });
+   </script>
 </body>
 </html>

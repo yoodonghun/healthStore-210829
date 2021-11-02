@@ -18,8 +18,8 @@ public class ReviewBO {
 		return reviewDAO.insertReview(productId, writer, grade, review);
 	}
 	
-	public List<Review> getReviewList(Integer productId){
-		return reviewDAO.selectReviewList(productId);
+	public List<Review> getReviewList(){
+		return reviewDAO.selectReviewList();
 	}
 			
 	
