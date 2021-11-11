@@ -35,15 +35,15 @@ public class AdminController {
 	
 	@RequestMapping("/sale_view")
 	public String sale(Model model) {
-		List<Product> productDetail = productBO.getProductDetail();
-		model.addAttribute("productDetail", productDetail);
+		List<Product> productList = productBO.getProductList();
+		model.addAttribute("productList", productList);
 		return "admin/sale";
 	}
 	
 	@RequestMapping("/saleList_view")
 	public String saleList(Model model) {
-		List<Product> productDetail = productBO.getProductDetail();
-		model.addAttribute("productDetail", productDetail);
+		List<Product> productList = productBO.getProductList();
+		model.addAttribute("productList", productList);
 		return "admin/saleList";
 	}
 }

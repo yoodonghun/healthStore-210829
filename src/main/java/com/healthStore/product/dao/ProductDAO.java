@@ -11,19 +11,22 @@ import com.healthStore.product.model.Product;
 public interface ProductDAO {
 
 	public int insertProduct(
-			@Param("productId") Integer productId,
 			@Param("productName") String productName,
 			@Param("price") int price,
 			@Param("imagePath") String imagePath);
 	
-	public List<Product> selectProductDetail(
-//			@Param("productName") String productName,
-//			@Param("price") int price,
-//			@Param("imagePath") String imagePath);
-			);
+	public List<Product> selectgetProductList();
 	
 	public Product selectDetail(
-			@Param("productId") Integer productId);
+			@Param("id") Integer id);
 	
-	
+	public int insertNewProduct(
+			
+			@Param("productName") String productName,
+			@Param("price") Integer price,
+			@Param("part") String part,
+			@Param("imagePath") String imagePath);
+
+	public Product selectNewProduct(
+			@Param("id") int id);
 }

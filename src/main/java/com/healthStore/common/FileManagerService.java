@@ -18,9 +18,9 @@ public class FileManagerService {
 
 	public final static String FILE_UPLOAD_PATH = "D:\\Yoo\\Spring-Project\\healthStore\\images/";
 	
-	public String saveFile(int productId, MultipartFile file) throws IOException {
+	public String saveFile(String loginId, MultipartFile file) throws IOException {
 		
-		String directoryName = productId + "_" + System.currentTimeMillis() + "/";
+		String directoryName = loginId + "_" + System.currentTimeMillis() + "/";
 		String filePath = FILE_UPLOAD_PATH + directoryName;
 		
 		File directory = new File(filePath);
@@ -45,8 +45,7 @@ public class FileManagerService {
 		if (Files.exists(path)) {
 			Files.delete(path);
 		}
-		
-		
+				
 		path = path.getParent();
 		if (Files.exists(path)) {
 			Files.delete(path);

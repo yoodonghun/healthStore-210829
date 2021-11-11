@@ -53,6 +53,11 @@
 	                         </div>
 	                         
 	                         <div class="d-flex mt-4">
+	                           <input type="text" name="part" class="form-control mr-4" placeholder="부위">
+	                           
+	                         </div>
+	                         
+	                         <div class="d-flex mt-4">
 	                           <div class="deleveryPrice  mr-4">배송비</div>
 	                           <div class="ml-4">무료</div>
 	                         </div>
@@ -90,6 +95,7 @@
     	 $("#cancleBtn").on("click", function(){
     		 $("input[name=productName]").val('');
     		 $("input[name=price]").val('');
+    		 $("input[name=part]").val('');
     		 $("input[name=image]").val('');
     		 
     	 });
@@ -107,6 +113,12 @@
     			 return;
     		 } 
     		 
+    		 let part = $('input[name=part]').val().trim();
+    		 if(part == ''){
+    			 alert("부위 입력해주세요");
+    			 return;
+    		 } 
+    		 
     		 let file = $('input[name=image]').val();
     		 
     		 if (file != ''){
@@ -121,6 +133,7 @@
     		 let formData = new FormData();
     		 formData.append("productName", productName);
     		 formData.append("price", price);
+    		 formData.append("part", part);
     		 formData.append("file", $('input[name=image]')[0].files[0]);
     		 
     		 $.ajax({
@@ -139,6 +152,7 @@
     		         ,error: function(e){
     		        	 alert("상품 등록에 실패했습니다. ");
     		         }
+    		         
     		 });
     	 }); 
       });

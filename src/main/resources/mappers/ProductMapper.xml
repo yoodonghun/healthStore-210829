@@ -6,8 +6,7 @@
     <insert id="insertProduct" parameterType="map">
        INSERT INTO `product`
        (
-           `id`
-           ,`productId`
+           `id`           
            ,`productName`
            ,`price`
            ,`part`
@@ -16,9 +15,8 @@
            ,`updatedAt`       
        )
        VALUES
-       (
-           #{productId}
-           ,#{productName}
+       (           
+           #{productName}
            ,#{price}
            ,#{part}
            ,#{imagePath}
@@ -26,10 +24,9 @@
            ,NOW()
        )
     </insert>
-     <select id="selectProductDetail" resultType="com.healthStore.product.model.Product">
+     <select id="selectgetProductList" resultType="com.healthStore.product.model.Product">
        SELECT
-            `id`
-           ,`productId`
+            `id`           
            ,`productName`
            ,`price`
            ,`part`
@@ -46,7 +43,6 @@
     <select id="selectDetail" parameterType="int" resultType="com.healthStore.product.model.Product">
       SELECT
           `id`
-           ,`productId`
            ,`productName`
            ,`price`
            ,`part`
@@ -56,7 +52,45 @@
       FROM
          `product`
       WHERE   
-         `productId` = #{productId} 
+         `id` = #{id} 
         
     </select>
+    
+    <insert id="insertNewProduct" parameterType="map">
+       INSERT INTO `product`
+       (                                  
+           `productName`
+           ,`price`
+           ,`part`
+           ,`imagePath`
+           ,`createdAt`
+           ,`updatedAt`         
+       )
+       VALUES
+       (                    
+           #{productName}
+           ,#{price}
+           ,#{part}
+           ,#{imagePath}
+           ,NOW()
+           ,NOW()
+       )
+   </insert>
+   
+   <select id="selectNewProduct" parameterType="int" resultType="com.healthStore.product.model.Product">
+      SELECT
+           `id`
+           ,`productName`
+           ,`price`
+           ,`part`
+           ,`imagePath`
+           ,`createdAt`
+           ,`updatedAt`
+      FROM
+           `product`
+      WHERE
+           `id` = #{id}     
+   </select>
+    
+    
  </mapper>

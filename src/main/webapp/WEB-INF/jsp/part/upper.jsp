@@ -49,27 +49,27 @@
 	        
 				<div>
 				  <div class="bottom-imageBox d-flex justify-content-between">
-				   <c:forEach var="item" items="${productDetail}" end="0">
+				   <c:forEach var="item" items="${productList}" end="0">
 					<div class="detail1">					 					  
-						<a href="/product/detail_view?productId=${item.id}" class="text-blue">
+						<a href="/product/detail_view?id=${item.id}" class="text-blue">
 						<img src=${item.imagePath} alt="" width="450px" height="450px">
 					   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
 						<div class="text-danger"><h4>${item.price}원</h4></div>					    
 					</div>
 				  </c:forEach>
 
-					<c:forEach var="item" items="${productDetail}" begin="1" end="1">
+					<c:forEach var="item" items="${productList}" begin="1" end="1">
 						<div class="detail2">					 					  
-							<a href="/product/detail_view?productId=${item.id}" class="text-blue">
+							<a href="/product/detail_view?id=${item.id}" class="text-blue">
 							<img src=${item.imagePath} alt="" width="450px" height="450px">
 						   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
 							<div class="text-danger"><h4>${item.price}원</h4></div>					    
 						</div>
 					</c:forEach>
 
-					<c:forEach var="item" items="${productDetail}" begin="2" end="2">
+					<c:forEach var="item" items="${productList}" begin="2" end="2">
 						<div class="detail3">					 					  
-							<a href="/product/detail_view?productId=${item.id}" class="text-blue">
+							<a href="/product/detail_view?id=${item.id}" class="text-blue">
 							<img src=${item.imagePath} alt="" width="450px" height="450px">
 						   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
 							<div class="text-danger"><h4>${item.price}원</h4></div>					    
