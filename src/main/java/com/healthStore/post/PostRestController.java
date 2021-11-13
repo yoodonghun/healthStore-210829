@@ -23,8 +23,6 @@ public class PostRestController {
 	private ProductBO productBO;
 	
 	
-	
-
 
 	@RequestMapping("/create")
 	public Map<String, Object> postCreate(
@@ -37,8 +35,8 @@ public class PostRestController {
 		
 		
 		HttpSession session = request.getSession();	
-		String loginId = (String) session.getAttribute("userLoginId");
-		
+		//String loginId = (String) session.getAttribute("userLoginId");
+		String loginId = "image";
 		 
 		
 		Map<String, Object> result = new HashMap<>();

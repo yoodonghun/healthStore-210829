@@ -38,7 +38,7 @@
       
        <div class="d-flex justify-content-center">
          <div class="bottomBox">
-           <h1>오늘의 추천상품</h1>         
+           <h1>오늘의 상품</h1>         
          </div>       
       </div><br>
       
@@ -91,7 +91,7 @@
 					</div>
 				  </c:forEach>
 
-					<c:forEach var="item" items="${productList}" begin="10" end="10">
+					 <c:forEach var="item" items="${productList}" begin="10" end="10">
 						<div class="detail2">					 					  
 							<a href="/product/detail_view?id=${item.id}" class="text-blue">
 							<img src=${item.imagePath} alt="" width="450px" height="450px">
@@ -107,7 +107,7 @@
 						   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
 							<div class="text-danger"><h4>${item.price}원</h4></div>					    
 						</div>
-					</c:forEach>
+					</c:forEach> 
 				  </div>
 				</div>	
 	           

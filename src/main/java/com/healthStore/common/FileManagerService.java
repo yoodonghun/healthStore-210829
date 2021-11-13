@@ -16,7 +16,7 @@ public class FileManagerService {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-	public final static String FILE_UPLOAD_PATH = "D:\\Yoo\\Spring-Project\\healthStore\\images/";
+	public final static String FILE_UPLOAD_PATH = "D:\\Yoo\\Spring-Project\\healthStore\\healthStore\\healthStore\\src\\main\\resources\\static\\images/";
 	
 	public String saveFile(String loginId, MultipartFile file) throws IOException {
 		
@@ -36,7 +36,7 @@ public class FileManagerService {
 		Files.write(path, bytes);
 		
 		
-		return "/images/" + directoryName + file.getOriginalFilename();
+		return "/static/images/" + directoryName + file.getOriginalFilename();
 	}
 	
 	public void deleteFile(String imagePath) throws IOException {
