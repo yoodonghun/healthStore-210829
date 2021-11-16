@@ -146,7 +146,14 @@
     				 ,success: function(data) {
     					 if(data.result == 'success'){
     						 alert("상품이 등록되었습니다");
-    						 location.href = "/product/main_page_view"
+    						 if(part == "상체"){
+    							 location.href="/product/himssen_upperBody_view"
+    						 }else if(part == "하체"){
+    							 location.href="/product/himssen_lowerBody_view"
+    						 }else if(part == "복근"){
+    							 location.href="/product/himssen_abdominal_view"
+    						 }
+    						 //location.href = "/product/main_page_view"
     					 }
     				 }
     		         ,error: function(e){

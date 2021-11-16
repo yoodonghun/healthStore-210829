@@ -76,9 +76,37 @@
 						</div>
 					</c:forEach>
 				  </div>
+				</div>				      
+	       </div><br>
+	       
+	       <div class="d-flex justify-content-around">
+	        
+				<div>
+				  <div class="bottom-imageBox d-flex justify-content-around">
+				   <c:forEach var="item" items="${productList}" begin="11" end="20">
+				   <c:choose>
+				    <c:when test="${item.part eq '복근'}">
+					<div class="detail1">					 					  
+						<a href="/product/detail_view?id=${item.id}" class="text-blue">
+						<img src=${item.imagePath} alt="" width="450px" height="450px">
+						<div class="text-white">
+						   
+						        ${item.part}
+						     
+						</div>
+					   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
+						<div class="text-danger"><h4>${item.price}원</h4></div>					    
+					</div>
+					</c:when>
+						   </c:choose>
+				  </c:forEach>
+
+					
+				  </div>
 				</div>
-				      
-	       </div>
+			</div><br>
+	       
+	       
        </div>
 		   	
 	</div>
