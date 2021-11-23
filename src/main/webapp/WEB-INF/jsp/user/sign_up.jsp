@@ -93,7 +93,7 @@
 				},
 				success : function(data) {
 					if (data.result == true) {
-						$("#idCheckDuplicated").removeClass("d-none");
+						$("#idCheckDuplicated").removeClass("d-none");	
 						$("#idCheckLength").addClass("d-none");
 						$("#idCheckOk").addClass("d-none");
 					} else {

@@ -23,7 +23,7 @@ public class UserRestController {
 	private UserBO userBO;
 	
 	
-   @RequestMapping("is_duplicated_id")
+   @RequestMapping("/is_duplicated_id")
    public Map<String, Boolean> isDuplicatedId(
 		   @RequestParam("loginId") String loginId){
 	   

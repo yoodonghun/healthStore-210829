@@ -15,16 +15,18 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileManagerService {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-
-	public final static String FILE_UPLOAD_PATH = "D:\\Yoo\\Spring-Project\\healthStore\\healthStore\\healthStore\\src\\main\\resources\\static\\images/";
 	
+	public final static String FILE_UPLOAD_PATH = "/home/ec2-user/imageFile/saveImages/";
+	
+
 	public String saveFile(String loginId, MultipartFile file) throws IOException {
 		
 		String directoryName = loginId + "_" + System.currentTimeMillis() + "/";
 		String filePath = FILE_UPLOAD_PATH + directoryName;
 		
 		File directory = new File(filePath);
-		
+		//logger.error("mypath:"+directory.getAbsolutePath());
+		//logger.error("what: "+  System.getProperty("catalina.base"));
 		if (directory.mkdir() == false) {
 			logger.error("[파일업로드] 디렉토리 생성 실패");
 			return null; 
@@ -36,12 +38,12 @@ public class FileManagerService {
 		Files.write(path, bytes);
 		
 		
-		return "/static/images/" + directoryName + file.getOriginalFilename();
+		return "/saveImages/" + directoryName + file.getOriginalFilename();
 	}
 	
 	public void deleteFile(String imagePath) throws IOException {
 		
-		Path path = Paths.get(FILE_UPLOAD_PATH + imagePath.replace("/images/", ""));
+		Path path = Paths.get(FILE_UPLOAD_PATH + imagePath.replace("/saveImages/", ""));
 		if (Files.exists(path)) {
 			Files.delete(path);
 		}

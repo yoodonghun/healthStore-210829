@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/health-store?serverTimezone=UTC&characterEncoding=UTF-8
-    username: root
-    password: root
+    url: jdbc:mysql://database-1.czwnq7fgqdqz.ap-northeast-2.rds.amazonaws.com:3306/health-store?serverTimezone=UTC&characterEncoding=UTF-8
+    username: dbehdgjs
+    password: dbehdgjs
   mvc:
     static-path-pattern: /static/**
     view:
