@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,13 +49,13 @@
 	       <div class="d-flex justify-content-center">
 	        
 				<div>
-				  <div class="bottom-imageBox d-flex justify-content-between">
+				  <div class="bottom-imageBox d-flex">
 				   <c:forEach var="item" items="${productList}" begin="0" end="2">
 					<div class="detail1">					 					  
 						<a href="/product/detail_view?id=${item.id}" class="text-blue">
 						<img src=${item.imagePath} alt="" width="450px" height="450px">
 					   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
-						<div class="text-danger"><h4>${item.price}원</h4></div>					    
+						<div class="text-danger"><h4><fmt:formatNumber value="${item.price}" pattern="#,###"/>원</h4></div>					    
 					</div>
 				  </c:forEach>
 
@@ -66,7 +67,7 @@
 			<div class="d-flex justify-content-center">
 	        
 				<div>
-				  <div class="bottom-imageBox d-flex justify-content-around">
+				  <div class="bottom-imageBox d-flex">
 				   <c:forEach var="item" items="${productList}" begin="9" end="20">
 				   <c:choose>
 				    <c:when test="${item.part eq '상체'}">
@@ -79,7 +80,7 @@
 						     
 						</div>
 					   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
-						<div class="text-danger"><h4>${item.price}원</h4></div>					    
+						<div class="text-danger"><h4><fmt:formatNumber value="${item.price}" pattern="#,###"/>원</h4></div>					    
 					</div>
 					</c:when>
 						   </c:choose>

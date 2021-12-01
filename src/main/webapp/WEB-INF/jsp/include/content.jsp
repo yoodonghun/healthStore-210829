@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
   <div>
      <div class="d-flex justify-content-center mt-4">
@@ -54,7 +55,7 @@
 						<a href="/product/detail_view?id=${item.id}" class="text-blue">
 						<img src=${item.imagePath} alt="" width="450px" height="450px">
 					   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
-						<div class="text-danger"><h4>${item.price}원</h4></div>					    
+						<div class="text-danger"><h4><fmt:formatNumber value="${item.price}" pattern="#,###"/>원</h4></div>					    
 					</div>
 				  </c:forEach>
 
@@ -63,7 +64,7 @@
 							<a href="/product/detail_view?id=${item.id}" class="text-blue">
 							<img src=${item.imagePath} alt="" width="450px" height="450px">
 						   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
-							<div class="text-danger"><h4>${item.price}원</h4></div>					    
+							<div class="text-danger"><h4><fmt:formatNumber value="${item.price}" pattern="#,###"/>원</h4></div>					    
 						</div>
 					</c:forEach>
 
@@ -72,7 +73,7 @@
 							<a href="/product/detail_view?id=${item.id}" class="text-blue">
 							<img src=${item.imagePath} alt="" width="450px" height="450px">
 						   	<div class="font-weight-bold mt-4"><h4>${item.productName}</h4></div></a><br>
-							<div class="text-danger"><h4>${item.price}원</h4></div>					    
+							<div class="text-danger"><h4><fmt:formatNumber value="${item.price}" pattern="#,###"/>원</h4></div>					    
 						</div>
 					</c:forEach>
 				  </div>

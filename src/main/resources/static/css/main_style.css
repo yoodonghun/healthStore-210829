@@ -19,7 +19,7 @@ nav {height: 70px; border-top:3px solid; border-bottom:1px solid; color:#000000}
 .middleText {display: grid; place-content: center; text-align:center; font-size:30px; background-color:#c0c0c0}
 
 .bottomBox{width:1550px; height:50px;}
-.bottom-imageBox{width:1550px; height: 700px;}
+.bottom-imageBox{width:1650px; height: 700px; justify-content:space-around}
 
 a:hover{text-decoration:none}
 
@@ -46,7 +46,7 @@ a:hover{text-decoration:none}
 /*part page  */
 .upBox{width:1550px; height:550px;}
 .topPartBox{ width: 1050px; height:450px; font-size: 30px}
-.productBox {width:1550px; height:600px;} 
+.productBox {width:1650px; height:600px;} 
 
 .uppertext{width:500px; height:500px; border:1px solid black; font-size:40px; font-family:serif; background-color:#000000;}
 
@@ -55,17 +55,6 @@ a:hover{text-decoration:none}
 .empty{width:100px}
 
 
-
-
-
-/*cart */
-.emptyBox{width:1200px; height:100px;}
-.emptyBox1{width:1200px; height:30px;}
-.shoppingBasket{width:1200px; height:50px;}
-.basketText{font-size:40px}
-.basket{width:1200px; height: 400px; background-color:#ffffff; border:1px solid black; border-left:0px; border-right:0px}
-.saleBtn1{width:210px; height:80px; background-color:#000000; font-size:25px}
-.saleBtn2{width:210px; height:80px; background-color:#ffffff; font-size:25px}
 
 /*detail view*/
 .detailImageBox{width:1500px; height:700px; }

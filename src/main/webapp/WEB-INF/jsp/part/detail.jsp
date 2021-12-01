@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +40,7 @@
                
                <div class="detailBox ml-4">       
                  <div class="ml-3 mt-4 productName">${detail.productName}</div><br><br>
-                 <div class="ml-4 mt-2 productPrice font-weight-bold text-danger">${detail.price}원</div>
+                 <div class="ml-4 mt-2 productPrice font-weight-bold text-danger"><fmt:formatNumber value="${detail.price}" pattern="#,###"/>원</div>
                 
                 
                  <hr>
