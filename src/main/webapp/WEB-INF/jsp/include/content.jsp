@@ -49,7 +49,7 @@
 	       <div class="d-flex justify-content-center">
 	        
 				<div>
-				  <div class="bottom-imageBox d-flex justify-content-between">
+				  <div class="bottom-imageBox d-flex">
 				   <c:forEach var="item" items="${productList}" end="0">
 					<div class="detail1">					 					  
 						<a href="/product/detail_view?id=${item.id}" class="text-blue">
